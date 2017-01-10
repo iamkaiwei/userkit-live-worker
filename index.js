@@ -50,7 +50,7 @@ setInterval(() => {
           { project_id: mongoose.Types.ObjectId(project_id), name: k, date: date_str, hour: hour },
           { $push: { [min]: count } },
           { upsert: true }
-        ).then(doc => console.log(doc))
+        ).then(doc => doc)
         .catch(err => console.log(err))
       })
     })
